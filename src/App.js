@@ -16,7 +16,6 @@ import {
   limit,
   addDoc,
   serverTimestamp,
-  onSnapshot,
 } from "firebase/firestore";
 import { getAnalytics } from "firebase/analytics";
 
@@ -44,7 +43,7 @@ function App() {
   return (
     <div className="App">
       <header>
-        <h1>⚛️🔥💬</h1>
+        <h1>Group Chat</h1>
         <SignOut />
       </header>
 
@@ -61,12 +60,23 @@ function SignIn() {
 
   return (
     <>
+      {/* <button class="google-btn" onClick={signInWithGoogle}>
+        <div class="google-icon-wrapper">
+          <img
+            class="google-icon"
+            src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"
+          />
+        </div>
+        <p class="btn-text">
+          <b>Sign in with google</b>
+        </p>
+      </button> */}
       <button className="sign-in" onClick={signInWithGoogle}>
-        Sign in with Google
+        Continue with Google
       </button>
-      <p>
+      {/* <p>
         Do not violate the community guidelines or you will be banned for life!
-      </p>
+      </p> */}
     </>
   );
 }
@@ -120,7 +130,7 @@ function ChatRoom() {
           placeholder="say something nice"
         />
         <button type="submit" disabled={!formValue}>
-          🕊️
+          🚀
         </button>
       </form>
     </>
